@@ -14,19 +14,27 @@ const Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  let newItem = new CartItem(product, quantity);
+  this.items.push(newItem);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  let stringifiedValues = JSON.stringify(this.items);
+  localStorage.setItem('cart', stringifiedValues);
 };
 
-Cart.prototype.removeItem = function(item) {
+Cart.prototype.removeItem = function(event) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  let item = event.target.id;
+  this.items.splice(item);
 };
 
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
+  let cartTotalEl = document.getElementById('itemCount');
+  cartTotalEl.textContent = `${this.items.length}`;
 }
 
 const CartItem = function(product, quantity) {
