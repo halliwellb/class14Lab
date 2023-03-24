@@ -31,7 +31,7 @@ function handleSubmit(event) {
   state.cart.saveToLocalStorage();
   state.cart.updateCounter();
   updateCartPreview();
-
+  console.log(localStorage)
 }
 
 // TODO: Add the selected item and quantity to the cart
