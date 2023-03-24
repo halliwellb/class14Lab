@@ -39,6 +39,7 @@ function addSelectedItemToCart() {
   let quantityEl = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
   state.cart.addItem(itemPicked, quantityEl);
+  console.log(state.cart);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -51,10 +52,10 @@ function addSelectedItemToCart() {
 
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
-  // console.log(item)
-  // let product = item.product;
-  // let quantity = item.quantity;
-  // console.log(product, quantity)
+  console.log(item)
+  let product = item.product;
+  let quantity = item.quantity;
+  console.log(product, quantity)
   let itemPicked = document.getElementById('items').value;
   console.log(itemPicked);
   let quantityEl = document.getElementById('quantity').value;
