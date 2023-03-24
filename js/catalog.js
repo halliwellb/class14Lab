@@ -53,10 +53,6 @@ function addSelectedItemToCart() {
 
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
-  console.log(item)
-  let product = item.product;
-  let quantity = item.quantity;
-  console.log(product, quantity)
   let itemPicked = document.getElementById('items').value;
   console.log(itemPicked);
   let quantityEl = document.getElementById('quantity').value;
