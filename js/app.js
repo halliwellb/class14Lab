@@ -14,10 +14,13 @@ const Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  let newItem = new CartItem(product, quantity);
+  this.items.push(newItem);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  let stringifiedValues = 
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -27,6 +30,9 @@ Cart.prototype.removeItem = function(item) {
 
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
+  let cartTotalEl = document.getElementById('itemCount');
+  cartTotalEl.textContent = `${this.items.lenth}`
+  cartTotalEl.document.write(cartTotal);
 }
 
 const CartItem = function(product, quantity) {

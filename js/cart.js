@@ -22,6 +22,13 @@ function clearCart() {}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
+  let tableBody = document.querySelectorAll('tbody');
+
+  for(let i = 0; i < state.cart.items.length; i++){
+  let tableRow = document.createElement('tr');
+  let tableData = document.createElement('td');
+  
+  }
 
   // TODO: Find the table body
 
