@@ -23,11 +23,7 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
-<<<<<<< HEAD
-
-=======
   // TODO: Prevent the page from reloading
->>>>>>> 28413d244e1d20db3f02fd0383e8420bf8862616
   event.preventDefault();
   // Do all the things ...
   addSelectedItemToCart();
@@ -36,32 +32,23 @@ function handleSubmit(event) {
   updateCartPreview();
 }
 
-<<<<<<< HEAD
-function addSelectedItemToCart(event) {
-
-  let itemPicked = document.getElementById('items').value;
-  let quantityEl = document.getElementById('quantity').value;
-=======
-// TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   let itemPicked = document.getElementById('items').value;
   // TODO: get the quantity
   let quantityEl = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
->>>>>>> 28413d244e1d20db3f02fd0383e8420bf8862616
   state.cart.addItem(itemPicked, quantityEl);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
-<<<<<<< HEAD
-function updateCartPreview(item) {
-  let itemPicked = document.getElementById('items').value;
-  let quantityEl = document.getElementById('quantity').value;
-  let cartContentsEl = document.getElementById('cartContents');
-  cartContentsEl.textContent = `${itemPicked}`, `${quantityEl}`;
+// function updateCartPreview(item) {
+//   let itemPicked = document.getElementById('items').value;
+//   let quantityEl = document.getElementById('quantity').value;
+//   let cartContentsEl = document.getElementById('cartContents');
+//   cartContentsEl.textContent = `${itemPicked}`, `${quantityEl}`;
 
-=======
+
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   // console.log(item)
@@ -77,7 +64,6 @@ function updateCartPreview() {
   let itemDiv = document.createElement('div');
   itemDiv.textContent = `${itemPicked}, ${quantityEl}`;
   cartContentsEl.appendChild(itemDiv);
->>>>>>> 28413d244e1d20db3f02fd0383e8420bf8862616
 }
 
 // Set up the "submit" event listener on the form.
