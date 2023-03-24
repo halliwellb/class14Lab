@@ -19,47 +19,29 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
-  // let tableBody = document.querySelectorAll('tr');
-  // tableBody.innerHTML = '';
-}
-
-// TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
-function showCart() {
-  let tableBody = document.querySelector('tbody');
-
-  for(let i = 0; i < state.cart.items.length; i++){
-  let tableRow = document.createElement('tr');
-  let tableData = document.createElement('td');
-  tableData.textContent = 'delete', 'quantity', `${state.cart[i]}`;
-  tableRow.appendChild(tableData);
-  }
-}
-  // TODO: Find the table body
-
-  // TODO: Iterate over the items in the cart
-  // TODO: Create a TR
-  // TODO: Create a TD for the delete link, quantity,  and the item
-  // TODO: Add the TR to the TBODY and each of the TD's to the TR
-
-
-function clearCart() {
-  let tableBody = document.querySelectorAll('tr');
-  tableBody.innerHTML= '';
+  let tableRows = document.querySelectorAll('tbody');
+  tableRows.innerHTML = '';
+  console.log(tableRows)
 }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 // TODO: Find the table body
 // TODO: Iterate over the items in the cart
 function showCart() {
-  let tableBody = document.querySelectorAll('tbody')
   for(let i = 0; i < state.cart.items.length; i++){
+    let tableBody = document.querySelectorAll('tbody')
     let tableRow = document.createElement('tr');
     let tableData = document.createElement('td');
-    console.log(state.cart.items[i])
-    let itemsData = state.cart.items[i];
-    tableData.textContent = `${itemsData}`;
-    console.log(tableData)
+    let itemsData = state.cart.items[i].product;
+    let itemsData2 = state.cart.items[i].quantity;
+    console.log(itemsData);
+    console.log(itemsData2);
+    tableData.innerHTML = itemsData, itemsData2;
+    console.log(tableData);
     tableRow.appendChild(tableData);
+    console.log(tableRow);
+    tableBody.innerHTML = tableRow;
+    console.log(tableBody);
   }
 }
 // TODO: Create a TR
