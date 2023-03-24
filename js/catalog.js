@@ -30,6 +30,7 @@ function handleSubmit(event) {
   state.cart.saveToLocalStorage();
   state.cart.updateCounter();
   updateCartPreview();
+  console.log(localStorage)
 }
 
 function addSelectedItemToCart() {

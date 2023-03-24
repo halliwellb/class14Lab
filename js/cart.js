@@ -55,7 +55,10 @@ function showCart() {
   for(let i = 0; i < state.cart.items.length; i++){
     let tableRow = document.createElement('tr');
     let tableData = document.createElement('td');
-    tableData.textContent = 'delete', 'quantity', `${state.cart[i]}`;
+    console.log(state.cart.items[i])
+    let itemsData = state.cart.items[i];
+    tableData.textContent = `${itemsData}`;
+    console.log(tableData)
     tableRow.appendChild(tableData);
   }
 }
@@ -66,9 +69,9 @@ function showCart() {
 function removeItemFromCart(event) {
   event.preventDefault();
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
-  Cart.prototype.removeItem();
+  state.cart.removeItem(event);
   // TODO: Save the cart back to local storage
-  Cart.prototype.saveToLocalStorage();
+  state.cart.saveToLocalStorage();
   // TODO: Re-draw the cart table
   showCart();
 }
