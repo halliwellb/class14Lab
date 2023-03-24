@@ -34,7 +34,8 @@ Cart.prototype.removeItem = function(event) {
 Cart.prototype.updateCounter = function() {
   // TODO: Update the cart count in the header nav with the number of items in the Cart
   let cartTotalEl = document.getElementById('itemCount');
-  cartTotalEl.textContent = `${this.items.length}`;
+  cartTotalEl.textContent = `${this.items.lenth}`
+  cartTotalEl.document.write(cartTotal);
 }
 
 const CartItem = function(product, quantity) {

@@ -8,7 +8,6 @@ state.cart = new Cart([]);
 // On screen load, we call this method to put all of the product options
 // (the things in the state.allProducts array) into the drop down list.
 function populateForm() {
-
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
   console.log(state.allProducts)
@@ -34,25 +33,30 @@ function handleSubmit(event) {
   console.log(localStorage)
 }
 
-// TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // TODO: suss out the item picked from the select list
   let itemPicked = document.getElementById('items').value;
-  console.log(itemPicked);
   // TODO: get the quantity
   let quantityEl = document.getElementById('quantity').value;
-  console.log(quantityEl);
   // TODO: using those, add one item to the Cart
   state.cart.addItem(itemPicked, quantityEl);
+  console.log(state.cart);
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// function updateCartPreview(item) {
+//   let itemPicked = document.getElementById('items').value;
+//   let quantityEl = document.getElementById('quantity').value;
+//   let cartContentsEl = document.getElementById('cartContents');
+//   cartContentsEl.textContent = `${itemPicked}`, `${quantityEl}`;
+
+
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
-  // console.log(item)
-  // let product = item.product;
-  // let quantity = item.quantity;
-  // console.log(product, quantity)
+  console.log(item)
+  let product = item.product;
+  let quantity = item.quantity;
+  console.log(product, quantity)
   let itemPicked = document.getElementById('items').value;
   console.log(itemPicked);
   let quantityEl = document.getElementById('quantity').value;
