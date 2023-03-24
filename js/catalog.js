@@ -10,7 +10,7 @@ state.cart = new Cart([]);
 function populateForm() {
   //TODO: Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
-  console.log(state.allProducts)
+  // console.log(state.allProducts)
   for (let i in state.allProducts) {
     let optionTag = document.createElement('option');
     optionTag.textContent = state.allProducts[i].name;
@@ -43,24 +43,16 @@ function addSelectedItemToCart() {
   console.log(state.cart);
 }
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
-// function updateCartPreview(item) {
-//   let itemPicked = document.getElementById('items').value;
-//   let quantityEl = document.getElementById('quantity').value;
-//   let cartContentsEl = document.getElementById('cartContents');
-//   cartContentsEl.textContent = `${itemPicked}`, `${quantityEl}`;
-
-
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   let itemPicked = document.getElementById('items').value;
-  console.log(itemPicked);
+  // console.log(itemPicked);
   let quantityEl = document.getElementById('quantity').value;
-  console.log(quantityEl);
+  // console.log(quantityEl);
   // TODO: Add a new element to the cartContents div with that information
   let cartContentsEl = document.getElementById('cartContents');
   let itemDiv = document.createElement('div');
-  itemDiv.textContent = `${itemPicked}, ${quantityEl}`;
+  itemDiv.textContent = `Added ${itemPicked} x ${quantityEl} to cart.`;
   cartContentsEl.appendChild(itemDiv);
 }
 

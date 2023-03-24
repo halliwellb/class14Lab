@@ -28,6 +28,7 @@ Cart.prototype.removeItem = function(event) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
   let item = event.target.id;
+  console.log(item);
   this.items.splice(item);
 };
 
